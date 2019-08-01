@@ -1,0 +1,4 @@
+# Ignora todos los ficheros acabados en .class
+#
+# Ignora tanto MainWindow.nib y builds/MainWindow.nib
+*.class

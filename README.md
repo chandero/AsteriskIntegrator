@@ -7,9 +7,14 @@ Cómo instalar?
 
 Uso probado -- crear la carpeta /opt/crmintegrator
 
-mkdir -p /opt/crmintegrator cd /opt/crmintegrator mkdir -p bin classes conf db libs logs
+mkdir -p /opt/crmintegrator
+cd /opt/crmintegrator 
+mkdir -p bin classes conf db libs logs
 
--- copiar en la carpeta bin los archivos bin start.sh stop.sh webapp.sh
+-- copiar en la carpeta bin los archivos
+start.sh 
+stop.sh 
+webapp.sh
 
 -- copiar en la carpeta classes los archivos de clases del aplicativo, estos se encuentran en el directorio build/classes -- copiar en la carpeta conf el archivo AsteriskIntegrator.properties -- copiar en la carpeta libs los archivos de librerias de dependencia (todas las de la carpeta lib del proyecto)
 

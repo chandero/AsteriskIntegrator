@@ -32,7 +32,7 @@ public class BridgeEnterEventUpdater extends AbstractEventUpdater
             eventParams.add(new BasicNameValuePair("callerid1", getCallerId1Number()));
             eventParams.add(new BasicNameValuePair("dateReceived", event.getDateReceived().toString()));
             eventParams.add(new BasicNameValuePair("callUUID", callId));
-            eventParams.add(new BasicNameValuePair("callstatus", "BridgeEnter"));
+            eventParams.add(new BasicNameValuePair("callstatus", "DialAnswer"));
         }
         return eventParams;
     }

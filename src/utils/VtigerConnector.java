@@ -54,6 +54,7 @@ public class VtigerConnector
         try
         {
             request.setEntity(new UrlEncodedFormEntity(eventParams, "UTF-8"));
+            logger.info("Query a enviar: " + request.toString());
             HttpResponse response = client.execute(request);
             int statusCode = response.getStatusLine().getStatusCode();
 

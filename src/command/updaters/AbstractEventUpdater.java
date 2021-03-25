@@ -117,7 +117,7 @@ public abstract class AbstractEventUpdater
   
   private List<BasicNameValuePair> getBaseRequestParams() {
     List<BasicNameValuePair> eventParams = new ArrayList();
-    // eventParams.add(new BasicNameValuePair("vtigersignature", PropertiesReader.getProperty("VtigerSecretKey")));
+    eventParams.add(new BasicNameValuePair("serverId", PropertiesReader.getProperty("CrmServerId")));
     
     return eventParams;
   }

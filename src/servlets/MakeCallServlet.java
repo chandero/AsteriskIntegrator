@@ -30,7 +30,7 @@ public class MakeCallServlet extends HttpServlet
         }
         catch(Exception ex)
         {
-            logger.fatal("Error on send resposne to vtiger", ex);
+            logger.fatal("Error on doCallFromRequest", ex);
         }
     }
 

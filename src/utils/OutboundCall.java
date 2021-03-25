@@ -51,8 +51,9 @@ public class OutboundCall {
          action.setContext(this.context);
          action.setExten(this.to);
          action.setCallerId(this.from);
-         action.setPriority(Integer.valueOf(1));
+         action.setPriority(1);
          action.setVariables(this.callParams);
+         System.out.println("Marcando con Params: " + action.toString());
          ManagerConnection connection = ConnectionManager.getConnection();
          try {
             connection.login();

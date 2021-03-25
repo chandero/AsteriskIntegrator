@@ -24,27 +24,27 @@ public class VarSetEventUpdater extends AbstractEventUpdater
     public void update()
         throws UpdateDataException
     {
-        System.out.println("Almacenando variable: " + event.getVariable() + " , valor: " + event.getValue());
+        // System.out.println("Almacenando variable: " + event.getVariable() + " , valor: " + event.getValue());
         if(lookupVariablesNames.contains(event.getVariable()))
         {
             String callId = null;
             List callIds = getCallIdBySource(CommonUtils.getFormattedUniqueId(event.getUniqueId()));
             if(callIds.size() > 0)
                 callId = (String)callIds.get(callIds.size() - 1);
-            System.out.println("Almacenando variable en callid: " + callId);
+            // System.out.println("Almacenando variable en callid: " + callId);
             List updateParams = new ArrayList();
             try
             {
                 if(callId == null)
                 {
-                    System.out.println("Almacenando insertando la variable: " + event.getVariable() + ", en callid: " + callId);
+                    // System.out.println("Almacenando insertando la variable: " + event.getVariable() + ", en callid: " + callId);
                     updateParams.add(CommonUtils.getFormattedUniqueId(event.getUniqueId()));
                     updateParams.add(event.getChannel());
                     updateParams.add(event.getValue());
                     database.updateSql((new StringBuilder()).append("INSERT INTO ").append(SQLiteDatabase.callsTable).append("(srcuid, channel, ").append(event.getVariable()).append(") VALUES(?,?,?);").toString(), updateParams);
                 } else
                 {
-                    System.out.println("Almacenando actualizado la variable: " + event.getVariable() + ", en callid: " + callId);
+                    // System.out.println("Almacenando actualizado la variable: " + event.getVariable() + ", en callid: " + callId);
                     updateParams.clear();
                     updateParams.add(event.getValue());
                     updateParams.add(callId);

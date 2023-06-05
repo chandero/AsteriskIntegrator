@@ -41,6 +41,7 @@ public class AsteriskIntegrator
             });
             Migration.applyMigrations();
             (new Thread(new ConnectionTask(asteriskConnection))).start();
+            (new Thread(new CdrResumenTask())).start();
             Server server = new Server();
             SelectChannelConnector connector = new SelectChannelConnector();
             connector.setPort(Integer.parseInt(PropertiesReader.getProperty("ServerPort")));

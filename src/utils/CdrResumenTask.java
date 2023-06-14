@@ -74,6 +74,7 @@ public class CdrResumenTask implements Runnable {
                         requestParams.add(new BasicNameValuePair("billableseconds", billsec.toString()));
                         requestParams.add(new BasicNameValuePair("disposition", disposition));
                         requestParams.add(new BasicNameValuePair("accountcode", accountcode));
+                        requestParams.add(new BasicNameValuePair("serverId", PropertiesReader.getProperty("CrmServerId")));
                         requestParams.add(new BasicNameValuePair("callstatus", "Call"));
                         requestParams.add(new BasicNameValuePair("callUUID", uniqueid));
                         // Date fecha = new Date(encu_fecha*1000);
